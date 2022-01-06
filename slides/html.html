@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>HTML Presentation</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h2>HTML</h2>
+          <p>Hypertext Markup Language</p>
+        </section>
+        <section>
+          <h2 data-id="code-title">Examples</h2>
+          <pre data-id="code-animation">
+            <code class="hljs" data-trim data-line-numbers="|1,4|2|3|">
+              <section>
+                <h2>HTML</h2>
+                <p>Hypertext Markup Language</p>
+              </section>
+            </code>
+          </pre>
+        </section>
+        <section>
+          <h2 data-id="code-html-page">Page Structure</h2>
+          <pre data-id="code-html">
+            <code class="hljs" data-trim data-line-numbers="|3-8|9-13|">
+              &lt;!DOCTYPE html&gt;
+              &lt;html lang="en"&gt;
+              &lt;head&gt;
+                <meta charset="UTF-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Document</title>
+              &lt;/head&gt;
+              &lt;body&gt;
+
+              <!-- Visible content goes here -->
+
+              &lt;/body&gt;
+              &lt;/html&gt;
+            </code>
+          </pre>
+        </section>
+        <section>
+          <h2 data-id="code-html-attribute">HTML attributes</h2>
+          <pre data-id="code-html-attrbute-pre">
+            <code class="hljs" data-trim data-line-numbers>
+              <img src="https://via.placeholder.com/150x150" alt="A 150 by 150 pixel square" />
+
+              <!--
+                img — The image tag is used to create an image.
+                src — The attribute to tell the img tag where to find the resource.
+                https://via.placeholder.com/150x150 — The value of the resource.
+                alt — The attribute for alternative text.
+              -->
+            </code>
+          </pre>
+        </section>
+        <section>
+          <h2>MDN &amp; Semantic HTML</h2>
+          <p>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Glossary/Semantics#semantic_elements"
+              target="_blank"
+              >MDN's Semantic Elements list</a
+            >
+          </p>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>
