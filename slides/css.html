@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>CSS Presentation</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h2>CSS</h2>
+          <p>Cascading Style Sheets</p>
+        </section>
+
+        <section>
+          <h2>Cascading</h2>
+          <figure>
+            <blockquote>
+              HTML elements inherit their styles in a "cascading" manner,
+              according to a very specific set of priorities, from lowest to
+              highest.
+            </blockquote>
+            <figcaption>
+              <cite>
+                <a href="https://www.learn-html.org/en/Styles">
+                  learn-html.org
+                </a>
+              </cite>
+            </figcaption>
+          </figure>
+        </section>
+
+        <section>
+          <h2>Reasons for cascading</h2>
+          <ul>
+            <li>The browser default styles</li>
+            <li>
+              Where style is defined (on page, on element, in external sheet)
+            </li>
+            <li>When style is defined (order of styles)</li>
+            <li>Specificity of selector (ID, class, element)</li>
+            <li>Specificity of selector (child, sibling, etc.)</li>
+          </ul>
+        </section>
+
+        <section>
+          <section>
+            <h2>Defining styles</h2>
+            <ul>
+              <li>on one element</li>
+              <li>on one page</li>
+              <li>external stylesheet</li>
+            </ul>
+          </section>
+          <section>
+            <h2 data-id="element-styles">On one element</h2>
+            <pre data-id="element-styles-ex">
+              <code class="hljs" data-trim data-line-numbers>
+                <h2 style="font-family: serif;">
+                  HTML
+                </h2>
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2 data-id="page-styles">On one page</h2>
+            <pre data-id="page-styles-ex">
+              <code class="hljs" data-trim data-line-numbers>
+                <style>
+                  h2 {
+                    font-family: serif;
+                  }
+                </style>
+                <h2>
+                  HTML
+                </h2>
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2 data-id="external-styles">External stylesheet</h2>
+            <pre data-id="external-styles-ex">
+              <code class="language-html hljs" data-trim data-line-numbers>
+                <link rel="stylesheet" href="style.css" />
+                <h2>
+                  HTML
+                </h2>
+              </code>
+            </pre>
+            <pre>
+              <code class="language-css hljs" data-trim data-line-numbers>
+                h2 {
+                  font-family: serif;
+                }
+              </code>
+            </pre>
+          </section>
+        </section>
+
+        <section>
+          <h2 data-id="anatomy-styles">Anatomy of a rule</h2>
+          <pre data-id="anatomy-styles-ex">
+            <code class="language-css hljs" data-trim data-line-numbers="1,3|2">
+              h2 {
+                font-family: serif;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2 data-id="selectors-styles">Kinds of selectors</h2>
+          <pre data-id="selectors-styles-ex">
+            <code class="language-css hljs" data-trim data-line-numbers="|1-3|5-7|9-11|">
+              h2 {
+                /* element selector */
+              }
+
+              .small {
+                /* class selector */
+              }
+
+              #headline {
+                /* ID selector */
+              }
+            </code>
+          </pre>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>
