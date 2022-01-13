@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Outerspace</title>
+    <style>
+      body {
+        background-color: #000;
+        color: #fff;
+        margin: 0;
+      }
+      section {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        height: 100vh;
+      }
+      .center {
+        align-self: center;
+      }
+      .right {
+        align-self: end;
+      }
+      .big {
+        font-size: 5em;
+      }
+      div {
+        padding: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="center big">*</div>
+      <div class="right small">*</div>
+      <div class="left big">*</div>
+      <div class="center small">*</div>
+      <div>moon</div>
+    </section>
+  </body>
+</html>
