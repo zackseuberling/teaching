@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Intermediate CSS</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h2>Intermediate CSS (continued)</h2>
+        </section>
+
+        <section>
+          <h2>Recap</h2>
+
+          <ul>
+            <li class="fragment">What is the "box model"?</li>
+            <li class="fragment">What is a pseudo class?</li>
+            <li class="fragment">What is CSS specificity?</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 data-id="spacing-styles">Layout</h2>
+
+          <ul>
+            <li>Flexbox</li>
+            <li>Grid</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Block elements</h2>
+          <img src="./layout-block.png" alt="" />
+        </section>
+
+        <section>
+          <h2>Flex</h2>
+          <pre>
+            <code class="language-css hljs" data-trim data-line-numbers>
+              .parent {
+                display: flex;
+                /* tells element to display all
+                   children elements as flex items */
+              }
+            </code>
+          </pre>
+
+          <p>
+            <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">
+              A Complete Guide to Flexbox
+            </a>
+          </p>
+        </section>
+
+        <section>
+          <h2>Flex</h2>
+          <img src="./layout-flex.png" alt="" />
+        </section>
+
+        <section>
+          <h2>Grid</h2>
+          <pre>
+            <code class="language-css hljs" data-trim data-line-numbers>
+              .parent {
+                display: grid;
+                /* tells element to display all
+                   children elements as grid items */
+                grid-template-columns: 1fr 1fr;
+                /* fr is a new css unit, but this
+                   defines the vertical separations */
+                grid-template-rows: 1fr 1fr;
+                /* this defines the horizontal separations */
+              }
+            </code>
+          </pre>
+          <p>
+            <a href="https://css-tricks.com/snippets/css/complete-guide-grid/">
+              A Complete Guide to Grid
+            </a>
+          </p>
+        </section>
+        <section>
+          <h2>Grid</h2>
+          <img src="./layout-grid.png" alt="" />
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>
