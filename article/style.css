@@ -1,0 +1,35 @@
+main {
+  width: 824px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  font-size: 62px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+p {
+  font-size: 22px;
+  line-height: 30px;
+}
+
+.author-information {
+  display: flex;
+}
+
+.author-bio {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.author-portrait {
+  width: 199px;
+}
+
+.five-columns {
+  width: 62.5%;
+}
