@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Responsive CSS</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h2>Responsive CSS</h2>
+        </section>
+
+        <section>
+          <h2>Introducing media Queries</h2>
+          <pre>
+            <code class="language-css hljs" data-trim data-line-numbers="|5-9">
+              .small-font {
+                font-size: 10px;
+              }
+
+              @media screen and (max-width: 600px) {
+                .small-font {
+                  font-size: 20px;
+                }
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Screen?</h2>
+          <pre>
+            <code class="language-css hljs" data-trim data-line-numbers="1,5|">
+              @media screen and (max-width: 600px) {
+                body {
+                  background-color: blue;
+                }
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Min or Max</h2>
+          <pre>
+            <code class="language-css hljs" data-trim data-line-numbers="|5-9|11-15|">
+              body {
+                background-color: red;
+              }
+
+              @media screen and (max-width: 600px) {
+                body {
+                  background-color: blue;
+                }
+              }
+
+              @media screen and (min-width: 900px) {
+                body {
+                  background-color: green;
+                }
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Debugging!</h2>
+
+          <ol>
+            <li>Open developer tools</li>
+            <li>
+              Click the Device Toolbar icon
+              <img src="./device-toolbar-icon.png" style="margin: 0" />
+            </li>
+            <li>
+              Click the "snowman" and "show media queries"<br />
+              <img src="./show-media-queries.png" />
+            </li>
+          </ol>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>
