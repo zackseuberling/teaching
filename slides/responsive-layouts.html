@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>CSS Goodies</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Responsive Layouts</h1>
+        </section>
+
+        <section>
+          <h3>HTML</h3>
+
+          <pre>
+            <code class="language-html hljs" data-trim data-line-numbers="">
+              <main>
+                <section>
+                  <div><img src="https://placekitten.com/200/300" /></div>
+                  <div><img src="https://placekitten.com/200/300" /></div>
+                  <div><img src="https://placekitten.com/200/300" /></div>
+                </section>
+              </main>
+            </code>
+          </pre>
+        </section>
+
+        <section data-auto-animate>
+          <h3>Grid CSS</h3>
+
+          <pre data-id="code-animation-grid">
+            <code class="language-css hljs" data-trim data-line-numbers>
+              section {
+                display: grid;
+                grid-template-columns: 1fr;
+              }
+
+              div {
+                margin: 10px;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section data-auto-animate>
+          <h3>Grid CSS</h3>
+
+          <pre data-id="code-animation-grid">
+            <code class="language-css hljs" data-trim data-line-numbers="10-14|">
+              section {
+                display: grid;
+                grid-template-columns: 1fr;
+              }
+
+              div {
+                margin: 10px;
+              }
+
+              @media screen and (min-width: 768px) {
+                section {
+                  grid-template-columns: 1fr 1fr 1fr;
+                }
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section data-auto-animate>
+          <h3>Flexbox CSS</h3>
+
+          <pre data-id="code-animation">
+            <code class="language-css hljs" data-trim data-line-numbers>
+              section {
+                display: flex;
+                flex-direction: row;
+              }
+
+              div {
+                margin: 10px;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section data-auto-animate>
+          <h3>Flexbox CSS</h3>
+
+          <pre data-id="code-animation">
+            <code class="language-css hljs" data-trim data-line-numbers="10-14|">
+              section {
+                display: flex;
+                flex-direction: row;
+              }
+
+              div {
+                margin: 10px;
+              }
+
+              @media screen and (min-width: 768px) {
+                section {
+                  flex-direction: row;
+                }
+              }
+            </code>
+          </pre>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>

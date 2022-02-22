@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Web Imagery</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Web Imagery</h1>
+        </section>
+
+        <section>
+          <h3>SVGs</h3>
+
+          <p>SVG stands for Scalable Vector Graphics</p>
+          <p>
+            SVGs are coded in a Markup Language (XML) and look a lot like HTML
+          </p>
+        </section>
+
+        <section>
+          <section>
+            <h3>SVGs</h3>
+
+            <pre>
+              <code class="language-xml hljs" data-trim data-line-numbers="">
+                <img src="path/to/image.svg" />
+
+                <svg viewBox="0 0 300 100" stroke="red" fill="grey" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="50" cy="50" r="40" />
+                  <circle cx="150" cy="50" r="4" />
+                </svg>
+              </code>
+            </pre>
+
+            <p>
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/svg"
+                >MDN's SVG resource</a
+              >
+            </p>
+          </section>
+
+          <section>
+            <h3>SVGs</h3>
+
+            <svg
+              viewBox="0 0 300 100"
+              xmlns="http://www.w3.org/2000/svg"
+              stroke="red"
+              fill="grey"
+            >
+              <circle cx="50" cy="50" r="40" />
+              <circle cx="150" cy="50" r="4" />
+            </svg>
+          </section>
+        </section>
+
+        <section data-auto-animate>
+          <h3>Optimizing images</h3>
+
+          <h4 class="fragment">Why?</h4>
+          <p class="fragment">
+            Larger images use more data to download. The more to download,
+            slower your web page.
+          </p>
+        </section>
+
+        <section data-auto-animate>
+          <h3>Optimizing images</h3>
+
+          <h4 class="fragment">How to optimize?</h4>
+          <p class="fragment">Choose the right format: jpg, gif, SVG, etc.</p>
+          <p class="fragment">
+            Compress the images using a tool like
+            <a href="https://squoosh.app/">Squoosh</a>.
+          </p>
+        </section>
+
+        <section data-auto-animate>
+          <h3>Aspect-ratio CSS property</h3>
+        </section>
+
+        <section data-auto-animate>
+          <h3>Aspect-ratio CSS property</h3>
+
+          <pre>
+            <code data-id="code-animation" class="language-css hljs" data-trim data-line-numbers="1,2,5">
+              img {
+                aspect-ratio: 1;
+                ...
+                ...
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section data-auto-animate>
+          <h3>Aspect-ratio CSS property</h3>
+
+          <pre>
+            <code data-id="code-animation" class="language-css hljs" data-trim data-line-numbers="3,4">
+              img {
+                aspect-ratio: 1;
+                object-fit: cover;
+                width: 300px;
+              }
+            </code>
+          </pre>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>

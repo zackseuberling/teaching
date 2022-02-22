@@ -1,4 +1,5 @@
 body {
+  font-family: "Libre Baskerville", serif;
   margin: 0;
 }
 
@@ -17,8 +18,14 @@ body {
 }
 
 h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
   font-size: 62px;
   margin-top: 0;
+}
+
+em {
+  font-style: italic;
 }
 
 h2 {
@@ -41,4 +48,8 @@ p {
 
 .author-portrait {
   width: 199px;
+  position: absolute;
+  left: 300px;
+  top: 0px;
+  z-index: 0;
 }
