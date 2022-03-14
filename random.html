@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,200;0,300;1,200;1,300&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Random Student Orderer</title>
+    <style>
+      * {
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 1.4;
+      }
+
+      body {
+        margin: 20px;
+        transition: background-color 0.5s;
+        transition-delay: background-color 0.5s;
+      }
+
+      .shuffling {
+        background-color: black;
+      }
+
+      .shuffled {
+        background-color: lightgreen;
+      }
+
+      ol {
+        margin: 0;
+      }
+
+      #shuffle {
+        background-color: orchid;
+        padding: 20px;
+        border-radius: 20px;
+        border: none;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+      }
+
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="shuffle">Shuffle</button>
+
+    <ol id="students">
+      <li>Takumi Aoyama</li>
+      <li>Shelby Bransford</li>
+      <li>Vitoria Cassol</li>
+      <li>Maggie Chao</li>
+      <li>Serena Connell</li>
+      <li>Natasha Djie</li>
+      <li>Megan Do</li>
+      <li>Emily Efird</li>
+      <li>Deanna Fong</li>
+      <li>Evelyn Hillebrandt</li>
+      <li>Paul Nguyen Hoang</li>
+      <li>Bridgette Huhtala</li>
+      <li>Pia Jondonovan</li>
+      <li>Nina Leon</li>
+      <li>Andrew Mori</li>
+      <li>Eli Shreve</li>
+      <li>Abby Smith</li>
+      <li>Courtney Szymczak</li>
+      <li>Brianna Tam</li>
+      <li>Leon Tanat Vadchochai</li>
+      <li>Jet Velasco</li>
+    </ol>
+
+    <script src="./random-student.js"></script>
+  </body>
+</html>
